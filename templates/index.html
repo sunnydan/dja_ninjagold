@@ -1,0 +1,44 @@
+Your Gold: {{ gold }}
+<form action="/process_money" method="post">
+    <input type="hidden" name="building" value="reset" />
+    <input type="submit" value="Reset" />
+</form>
+<br>
+<b>Farm</b>
+<br> (earns 10-20 gold)
+<br>
+<form action="/process_money" method="post">
+    <input type="hidden" name="building" value="farm" />
+    <input type="submit" value="Find Gold!" />
+</form>
+<br>
+<b>Cave</b>
+<br> (earns 5-10 gold)
+<br>
+<form action="/process_money" method="post">
+    <input type="hidden" name="building" value="cave" />
+    <input type="submit" value="Find Gold!" />
+</form>
+<br>
+<b>House</b>
+<br> (earns 2-5 gold)
+<br>
+<form action="/process_money" method="post">
+    <input type="hidden" name="building" value="house" />
+    <input type="submit" value="Find Gold!" />
+</form>
+<br>
+<b>Casino</b>
+<br> (earns/loses 0-50 gold)
+<br>
+<form action="/process_money" method="post">
+    <input type="hidden" name="building" value="casino" />
+    <input type="submit" value="Find Gold!" />
+</form>
+<br>
+Activities:
+<div id="activities">
+{% for activity in activities %}
+{{activity|safe}}
+{% endfor %}
+</div>
